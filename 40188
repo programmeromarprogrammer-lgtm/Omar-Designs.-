@@ -1,0 +1,3608 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Omar Designs — تصميم مواقع ويب احترافية، متاجر إلكترونية، هويات بصرية وتصميمات رقمية.">
+<meta name="keywords" content="Omar Designs, تصميم مواقع, تصميم جرافيك, متجر إلكتروني, هوية بصرية, مواقع مصر">
+<meta name="author" content="Omar Designs">
+
+<meta name="theme-color" content="#07111f">
+
+<meta property="og:title" content="Omar Designs | Web & Graphic Design">
+<meta property="og:description" content="حوّل فكرتك إلى موقع احترافي وهوية رقمية مميزة.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💎%3C/text%3E%3C/svg%3E">
+
+<title>Omar Designs | Web & Graphic Design</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+
+:root{
+--bg:#080b16;
+--bg2:#10162a;
+--card:rgba(18,25,45,.76);
+--solid:#12192d;
+--text:#f7f9ff;
+--muted:#aab4cc;
+--primary:#00c8ff;
+--primary2:#5865ff;
+--accent:#ffc857;
+--success:#32d583;
+--border:rgba(255,255,255,.10);
+--shadow:0 20px 60px rgba(0,0,0,.28);
+--radius:24px;
+}
+
+body.light{
+--bg:#f4f7fb;
+--bg2:#e9eef8;
+--card:rgba(255,255,255,.86);
+--solid:#fff;
+--text:#101525;
+--muted:#5f6b82;
+--border:rgba(16,21,37,.10);
+--shadow:0 18px 50px rgba(31,42,68,.12);
+}
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+min-height:100vh;
+font-family:'Cairo',Arial,sans-serif;
+color:var(--text);
+
+background:
+radial-gradient(
+circle at 15% 10%,
+rgba(0,200,255,.13),
+transparent 28%
+),
+radial-gradient(
+circle at 85% 20%,
+rgba(88,101,255,.15),
+transparent 30%
+),
+linear-gradient(
+135deg,
+var(--bg),
+var(--bg2)
+);
+
+transition:.35s;
+}
+
+button,
+input,
+textarea{
+font:inherit;
+}
+
+button{
+cursor:pointer;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.bg-orb{
+position:fixed;
+width:280px;
+height:280px;
+border-radius:50%;
+filter:blur(80px);
+opacity:.13;
+pointer-events:none;
+z-index:-1;
+}
+
+.orb-1{
+background:var(--primary);
+top:12%;
+right:-100px;
+}
+
+.orb-2{
+background:var(--primary2);
+bottom:5%;
+left:-100px;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:7px;
+flex-wrap:wrap;
+
+padding:11px 16px;
+
+background:rgba(8,11,22,.78);
+border-bottom:1px solid var(--border);
+
+backdrop-filter:blur(18px);
+}
+
+body.light .navbar{
+background:rgba(244,247,251,.82);
+}
+
+.brand{
+margin-left:10px;
+
+font-weight:900;
+font-size:18px;
+
+background:
+linear-gradient(
+90deg,
+var(--primary),
+var(--primary2)
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.nav-btn,
+.theme-btn,
+.menu-btn{
+border:1px solid var(--border);
+background:transparent;
+color:var(--text);
+
+padding:8px 12px;
+border-radius:999px;
+
+font-weight:800;
+transition:.25s;
+}
+
+.nav-btn:hover,
+.theme-btn:hover,
+.menu-btn:hover{
+transform:translateY(-2px);
+border-color:var(--primary);
+}
+
+.nav-btn.active{
+background:
+linear-gradient(
+90deg,
+var(--primary),
+var(--primary2)
+);
+
+color:#fff;
+border-color:transparent;
+
+box-shadow:
+0 8px 25px rgba(0,200,255,.22);
+}
+
+.menu-btn{
+display:none;
+font-size:20px;
+padding:7px 11px;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+.page{
+display:none;
+animation:pageIn .4s ease;
+}
+
+.page.active{
+display:block;
+}
+
+@keyframes pageIn{
+from{
+opacity:0;
+transform:translateY(14px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+}
+
+/* HERO */
+
+.hero{
+min-height:70vh;
+
+display:grid;
+grid-template-columns:1.15fr .85fr;
+
+gap:30px;
+align-items:center;
+
+padding:70px 0 45px;
+}
+
+.eyebrow{
+display:inline-flex;
+gap:8px;
+align-items:center;
+
+padding:7px 13px;
+
+border:1px solid rgba(0,200,255,.25);
+border-radius:999px;
+
+background:rgba(0,200,255,.08);
+
+color:var(--primary);
+
+font-weight:900;
+font-size:12px;
+
+letter-spacing:1.5px;
+}
+
+h1{
+font-size:clamp(2.3rem,6vw,4.8rem);
+line-height:1.08;
+margin:18px 0 14px;
+}
+
+.gradient-text{
+background:
+linear-gradient(
+90deg,
+var(--primary),
+#fff,
+var(--primary2)
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.hero p{
+font-size:1.08rem;
+line-height:1.9;
+
+color:var(--muted);
+
+max-width:680px;
+}
+
+.actions{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:24px;
+}
+
+.btn{
+border:0;
+border-radius:14px;
+
+padding:12px 18px;
+
+font-weight:800;
+
+background:
+linear-gradient(
+90deg,
+var(--primary),
+var(--primary2)
+);
+
+color:#fff;
+
+box-shadow:
+0 10px 28px rgba(0,200,255,.20);
+
+transition:.25s;
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+
+box-shadow:
+0 15px 35px rgba(0,200,255,.28);
+}
+
+.btn.secondary{
+background:transparent;
+border:1px solid var(--border);
+box-shadow:none;
+color:var(--text);
+}
+
+.btn.whatsapp{
+background:#25d366;
+box-shadow:
+0 10px 28px rgba(37,211,102,.20);
+}
+
+.btn.email{
+background:transparent;
+border:1px solid rgba(0,200,255,.35);
+color:var(--primary);
+box-shadow:none;
+}
+
+.btn.small{
+padding:9px 13px;
+font-size:13px;
+}
+
+/* HERO CARD */
+
+.hero-card{
+position:relative;
+
+min-height:380px;
+
+border:1px solid var(--border);
+border-radius:32px;
+
+background:var(--card);
+
+backdrop-filter:blur(18px);
+
+box-shadow:var(--shadow);
+
+overflow:hidden;
+
+padding:26px;
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.hero-card::before{
+content:"";
+
+position:absolute;
+
+inset:-80px auto auto -80px;
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+background:var(--primary);
+
+filter:blur(70px);
+
+opacity:.18;
+}
+
+.mockup{
+border:1px solid var(--border);
+border-radius:20px;
+
+padding:15px;
+
+background:rgba(255,255,255,.04);
+}
+
+.mock-top{
+display:flex;
+gap:6px;
+margin-bottom:14px;
+}
+
+.dot{
+width:9px;
+height:9px;
+
+border-radius:50%;
+
+background:var(--muted);
+
+opacity:.7;
+}
+
+.mock-line{
+height:12px;
+
+border-radius:8px;
+
+background:
+linear-gradient(
+90deg,
+var(--primary),
+var(--primary2)
+);
+
+margin:10px 0;
+}
+
+.mock-line.short{
+width:55%;
+}
+
+.mock-line.tiny{
+width:30%;
+}
+
+.mock-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+
+gap:8px;
+
+margin-top:14px;
+}
+
+.mock-box{
+height:90px;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.07);
+
+border:1px solid var(--border);
+}
+
+.floating-badge{
+position:absolute;
+
+bottom:24px;
+left:24px;
+
+padding:10px 14px;
+
+border-radius:14px;
+
+background:var(--solid);
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+font-weight:800;
+}
+
+/* GENERAL */
+
+.section-title{
+text-align:center;
+margin:35px 0 25px;
+}
+
+.section-title h2{
+font-size:2rem;
+margin:0 0 7px;
+}
+
+.section-title p{
+color:var(--muted);
+margin:0;
+}
+
+.card{
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:24px;
+
+box-shadow:var(--shadow);
+
+backdrop-filter:blur(14px);
+
+transition:.25s;
+}
+
+.card:hover{
+border-color:rgba(0,200,255,.28);
+transform:translateY(-2px);
+}
+
+/* PROJECTS */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.project-card{
+overflow:hidden;
+padding:0;
+}
+
+.project-img{
+width:100%;
+height:190px;
+
+object-fit:cover;
+
+display:block;
+
+background:var(--bg2);
+}
+
+.project-body{
+padding:20px;
+}
+
+.project-body h3{
+margin:0 0 7px;
+}
+
+.project-body p{
+color:var(--muted);
+line-height:1.8;
+}
+
+.tags{
+display:flex;
+gap:7px;
+flex-wrap:wrap;
+margin:12px 0;
+}
+
+.tag{
+font-size:12px;
+
+padding:5px 9px;
+
+border-radius:999px;
+
+background:rgba(0,200,255,.09);
+
+color:var(--primary);
+
+border:1px solid rgba(0,200,255,.16);
+}
+
+.filters{
+display:flex;
+flex-wrap:wrap;
+gap:9px;
+margin:0 0 18px;
+}
+
+.filter-btn{
+border:1px solid var(--border);
+
+background:rgba(255,255,255,.035);
+
+color:var(--text);
+
+padding:9px 15px;
+
+border-radius:999px;
+
+font-weight:800;
+
+transition:.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+border-color:var(--primary);
+
+color:var(--primary);
+
+background:rgba(0,200,255,.08);
+}
+
+.is-hidden{
+display:none!important;
+}
+
+/* ORDER */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr .75fr;
+gap:18px;
+}
+
+.input{
+width:100%;
+
+padding:13px 15px;
+
+border:1px solid var(--border);
+
+border-radius:14px;
+
+background:rgba(255,255,255,.05);
+
+color:var(--text);
+
+outline:none;
+
+margin:8px 0;
+}
+
+.input:focus{
+border-color:var(--primary);
+
+box-shadow:
+0 0 0 3px rgba(0,200,255,.10);
+}
+
+textarea.input{
+resize:vertical;
+min-height:130px;
+}
+
+.package-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+
+.package{
+position:relative;
+
+display:block;
+
+padding:18px;
+
+border:1px solid var(--border);
+
+border-radius:18px;
+
+background:rgba(255,255,255,.035);
+
+cursor:pointer;
+
+transition:.25s;
+}
+
+.package:hover,
+.package.active,
+.package:has(input:checked){
+transform:translateY(-3px);
+
+border-color:var(--primary);
+
+box-shadow:
+0 0 0 2px rgba(0,200,255,.12);
+
+background:rgba(0,200,255,.06);
+}
+
+.package input{
+position:absolute;
+opacity:0;
+}
+
+.package-name{
+display:block;
+
+font-weight:900;
+font-size:20px;
+
+margin-bottom:8px;
+}
+
+.package strong{
+display:block;
+
+font-size:21px;
+
+color:var(--primary);
+
+margin-bottom:5px;
+}
+
+.package small{
+color:var(--muted);
+}
+
+.popular-badge{
+position:absolute;
+
+top:-10px;
+right:12px;
+
+padding:4px 9px;
+
+border-radius:999px;
+
+background:var(--accent);
+
+color:#15110a;
+
+font-size:11px;
+
+font-weight:900;
+}
+
+.addons{
+display:grid;
+gap:9px;
+}
+
+.addons label{
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px;
+
+border:1px solid var(--border);
+
+border-radius:13px;
+
+background:rgba(255,255,255,.025);
+
+cursor:pointer;
+}
+
+.addons input{
+width:18px;
+height:18px;
+
+accent-color:var(--primary);
+}
+
+.addons b{
+margin-right:auto;
+color:var(--primary);
+}
+
+.summary-top,
+.summary-line{
+display:flex;
+
+justify-content:space-between;
+
+gap:10px;
+}
+
+.summary-top{
+font-weight:800;
+color:var(--muted);
+}
+
+.price{
+font-size:46px;
+
+font-weight:900;
+
+margin:18px 0 25px;
+
+background:
+linear-gradient(
+90deg,
+var(--primary),
+var(--primary2)
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+
+color:transparent;
+}
+
+.price small{
+font-size:17px;
+}
+
+.summary-line{
+padding:13px 0;
+
+border-bottom:1px solid var(--border);
+}
+
+.summary-line b{
+color:var(--primary);
+}
+
+.summary-note{
+margin-top:20px;
+
+padding:13px;
+
+border-radius:14px;
+
+background:rgba(255,200,87,.08);
+
+border:1px solid rgba(255,200,87,.2);
+
+color:var(--muted);
+
+line-height:1.8;
+
+font-size:13px;
+}
+
+.progress-wrap{
+margin-top:18px;
+}
+
+.progress-track{
+height:12px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:99px;
+
+overflow:hidden;
+}
+
+.progress-fill{
+height:100%;
+width:0;
+
+background:
+linear-gradient(
+90deg,
+var(--success),
+var(--primary)
+);
+
+transition:.4s;
+}
+
+/* CARDS */
+
+.skill-head{
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:6px;
+
+font-weight:700;
+}
+
+.cards-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+}
+
+.skill-card{
+padding:20px;
+}
+
+.skill-icon{
+font-size:30px;
+margin-bottom:12px;
+}
+
+.skill-card p,
+.review p{
+color:var(--muted);
+
+line-height:1.8;
+
+margin:12px 0 0;
+}
+
+.step{
+font-size:14px;
+
+font-weight:900;
+
+color:var(--primary);
+
+margin-bottom:12px;
+}
+
+/* FAQ */
+
+.faq-list{
+display:grid;
+gap:12px;
+}
+
+.faq-list summary{
+cursor:pointer;
+
+font-weight:900;
+
+list-style:none;
+}
+
+.faq-list summary::-webkit-details-marker{
+display:none;
+}
+
+.faq-list summary:after{
+content:"+";
+
+float:left;
+
+color:var(--primary);
+
+font-size:22px;
+}
+
+.faq-list details[open] summary:after{
+content:"−";
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+
+grid-template-columns:.8fr 1.2fr;
+
+gap:18px;
+}
+
+.profile{
+width:130px;
+height:130px;
+
+border-radius:50%;
+
+margin:0 auto 16px;
+
+display:block;
+
+object-fit:cover;
+
+border:3px solid var(--primary);
+
+box-shadow:
+0 0 35px rgba(0,200,255,.25);
+}
+
+.center{
+text-align:center;
+}
+
+.skills{
+display:grid;
+gap:14px;
+}
+
+.bar{
+height:9px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:99px;
+
+overflow:hidden;
+}
+
+.bar i{
+display:block;
+
+height:100%;
+
+width:var(--w);
+
+background:
+linear-gradient(
+90deg,
+var(--primary),
+var(--primary2)
+);
+
+border-radius:inherit;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:12px;
+
+margin:20px 0;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat strong{
+display:block;
+
+font-size:30px;
+
+color:var(--primary);
+}
+
+.stat span{
+color:var(--muted);
+
+font-size:13px;
+}
+
+/* WHY */
+
+.why-grid{
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:14px;
+}
+
+.why-icon{
+font-size:28px;
+}
+
+/* CTA */
+
+.cta-card{
+text-align:center;
+
+padding:42px 24px;
+}
+
+.cta-card h2{
+font-size:clamp(28px,4vw,48px);
+
+margin:10px 0;
+}
+
+.cta-card p{
+color:var(--muted);
+
+max-width:650px;
+
+margin:0 auto 22px;
+
+line-height:1.9;
+}
+
+.cta-actions{
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+flex-wrap:wrap;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+
+color:var(--muted);
+
+padding:45px 0 30px;
+
+border-top:1px solid var(--border);
+
+margin-top:50px;
+}
+
+/* MODAL */
+
+.modal{
+position:fixed;
+
+inset:0;
+
+z-index:2000;
+
+display:none;
+
+align-items:center;
+justify-content:center;
+
+padding:20px;
+
+background:rgba(0,0,0,.68);
+
+backdrop-filter:blur(7px);
+}
+
+.modal.show{
+display:flex;
+}
+
+.modal-card{
+width:min(650px,100%);
+
+max-height:85vh;
+
+overflow:auto;
+
+background:var(--solid);
+
+border:1px solid var(--border);
+
+border-radius:24px;
+
+padding:24px;
+
+box-shadow:var(--shadow);
+}
+
+.modal-img{
+width:100%;
+
+max-height:280px;
+
+object-fit:cover;
+
+border-radius:16px;
+
+margin:12px 0 16px;
+}
+
+.modal-head{
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:10px;
+}
+
+.close{
+border:0;
+
+background:transparent;
+
+color:var(--text);
+
+font-size:25px;
+}
+
+.modal-actions{
+display:flex;
+
+gap:8px;
+
+flex-wrap:wrap;
+}
+
+/* FLOAT BUTTONS */
+
+#whatsappFloat{
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+width:52px;
+height:52px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+background:#25d366;
+
+color:#fff;
+
+font-size:25px;
+
+z-index:900;
+
+box-shadow:
+0 10px 28px rgba(37,211,102,.28);
+
+transition:.25s;
+}
+
+#whatsappFloat:hover{
+transform:translateY(-4px) scale(1.06);
+}
+
+#scrollTop{
+position:fixed;
+
+left:20px;
+bottom:20px;
+
+width:48px;
+height:48px;
+
+border:0;
+
+border-radius:50%;
+
+display:none;
+
+background:
+linear-gradient(
+135deg,
+var(--primary),
+var(--primary2)
+);
+
+color:#fff;
+
+font-size:22px;
+
+z-index:900;
+}
+
+.toast{
+position:fixed;
+
+left:50%;
+bottom:82px;
+
+transform:translate(-50%,20px);
+
+opacity:0;
+
+pointer-events:none;
+
+z-index:3000;
+
+background:var(--solid);
+
+border:1px solid var(--border);
+
+padding:12px 18px;
+
+border-radius:14px;
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+}
+
+.toast.show{
+opacity:1;
+
+transform:translate(-50%,0);
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.hero,
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.package-grid,
+.skills-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding-top:45px;
+}
+
+.hero-card{
+min-height:300px;
+}
+
+.projects-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:680px){
+
+.navbar{
+justify-content:space-between;
+}
+
+.brand{
+margin:0;
+}
+
+.menu-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+width:100%;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:6px;
+}
+
+.nav-links.open{
+display:grid;
+}
+
+.nav-btn{
+font-size:12px;
+padding:8px 7px;
+}
+
+.theme-btn{
+padding:7px 10px;
+}
+
+}
+
+@media(max-width:580px){
+
+.projects-grid,
+.cards-grid{
+grid-template-columns:1fr;
+}
+
+.container{
+width:94%;
+}
+
+.hero{
+min-height:auto;
+}
+
+.hero-card{
+min-height:280px;
+}
+
+.mock-box{
+height:65px;
+}
+
+.floating-badge{
+bottom:15px;
+left:15px;
+}
+
+.actions .btn{
+width:100%;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+h1{
+font-size:clamp(2.2rem,12vw,3.5rem);
+}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+*,
+*::before,
+*::after{
+scroll-behavior:auto!important;
+animation:none!important;
+transition:none!important;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+
+<nav class="navbar" aria-label="التنقل الرئيسي">
+
+<div class="brand">
+OMAR DESIGNS
+</div>
+
+<button
+class="menu-btn"
+id="menuBtn"
+aria-label="فتح القائمة"
+aria-expanded="false">
+☰
+</button>
+
+<div class="nav-links" id="navLinks">
+
+<button class="nav-btn active" data-page="home">
+🏠 الرئيسية
+</button>
+
+<button class="nav-btn" data-page="projects">
+💼 أعمالي
+</button>
+
+<button class="nav-btn" data-page="services">
+🚀 الخدمات
+</button>
+
+<button class="nav-btn" data-page="order">
+🛒 اطلب الآن
+</button>
+
+<button class="nav-btn" data-page="faq">
+❓ FAQ
+</button>
+
+<button class="nav-btn" data-page="reviews">
+⭐ الآراء
+</button>
+
+<button class="nav-btn" data-page="skills">
+⚡ المهارات
+</button>
+
+<button class="nav-btn" data-page="process">
+🚀 طريقة العمل
+</button>
+
+<button class="nav-btn" data-page="about">
+👤 عني
+</button>
+
+</div>
+
+<button
+class="theme-btn"
+id="themeBtn"
+aria-label="تغيير المظهر">
+🌙
+</button>
+
+</nav>
+
+<main class="container">
+
+<section id="home" class="page active">
+
+<div class="hero">
+
+<div>
+
+<span class="eyebrow">
+⚡ متاح لمشاريع جديدة • Web & Graphic Design
+</span>
+
+<h1>
+أحوّل فكرتك إلى
+<span class="gradient-text">
+تصميم يلفت الانتباه
+</span>
+</h1>
+
+<p>
+أنا عمر، مصمم مواقع وجرافيك. أساعد أصحاب المشاريع والبراندات على الظهور بشكل احترافي من خلال مواقع عصرية، هويات بصرية وتصميمات سوشيال ميديا متناسقة.
+</p>
+
+<div class="actions">
+
+<button
+class="btn"
+onclick="goTo('projects')">
+شوف أعمالي 🚀
+</button>
+
+<button
+class="btn secondary"
+onclick="goTo('services')">
+الخدمات والباقات
+</button>
+
+<a
+class="btn whatsapp"
+href="https://wa.me/201018496877"
+target="_blank"
+rel="noopener">
+💬 واتساب
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<div>
+<h3>✨ واجهة احترافية</h3>
+
+<p style="color:var(--muted);line-height:1.8">
+تصميم حديث، ألوان متناسقة، تجربة مناسبة للموبايل والكمبيوتر، وتركيز على وضوح المحتوى.
+</p>
+</div>
+
+<div
+class="mockup"
+aria-label="معاينة شكل الموقع">
+
+<div class="mock-top">
+<i class="dot"></i>
+<i class="dot"></i>
+<i class="dot"></i>
+</div>
+
+<div class="mock-line"></div>
+<div class="mock-line short"></div>
+<div class="mock-line tiny"></div>
+
+<div class="mock-grid">
+<div class="mock-box"></div>
+<div class="mock-box"></div>
+<div class="mock-box"></div>
+</div>
+
+</div>
+
+<div class="floating-badge">
+🔥 Omar Designs
+</div>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="card stat">
+<strong>4</strong>
+<span>مجالات أساسية</span>
+</div>
+
+<div class="card stat">
+<strong>100%</strong>
+<span>Responsive</span>
+</div>
+
+<div class="card stat">
+<strong>24/7</strong>
+<span>استقبال الطلبات</span>
+</div>
+
+<div class="card stat">
+<strong>1</strong>
+<span>مكان لكل خدماتك</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>
+🚀 جاهز تبدأ مشروعك؟
+</h3>
+
+<p style="color:var(--muted)">
+اختار الباقة المناسبة واعرف السعر التقديري في أقل من دقيقة، وبعدها ابعت الطلب على واتساب أو الإيميل.
+</p>
+
+<button
+class="btn"
+onclick="goTo('order')">
+احسب سعر مشروعك الآن
+</button>
+
+</div>
+
+<div class="section-title">
+
+<h2>
+ليه Omar Designs؟
+</h2>
+
+<p>
+مش مجرد شكل حلو؛ الهدف إن الموقع يكون واضح وسهل الاستخدام.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="card">
+
+<div class="why-icon">
+📱
+</div>
+
+<h3>
+مناسب للموبايل
+</h3>
+
+<p style="color:var(--muted);line-height:1.8">
+الواجهة متجاوبة عشان العميل يقدر يتصفح من الموبايل بسهولة.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="why-icon">
+🎯
+</div>
+
+<h3>
+تركيز على الهدف
+</h3>
+
+<p style="color:var(--muted);line-height:1.8">
+تنظيم المحتوى والأزرار بحيث العميل يعرف يعمل إيه بسرعة.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="why-icon">
+🤝
+</div>
+
+<h3>
+تواصل مباشر
+</h3>
+
+<p style="color:var(--muted);line-height:1.8">
+إرسال الطلب متاح عبر واتساب أو البريد الإلكتروني.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="page">
+
+<div class="section-title">
+
+<h2>
+معرض أعمالي 💼
+</h2>
+
+<p>
+نماذج تجريبية قابلة للتطوير. استبدل الصور بأعمالك الحقيقية عند تجهيزها.
+</p>
+
+</div>
+
+<div class="filters">
+
+<button class="filter-btn active" data-filter="all">
+الكل
+</button>
+
+<button class="filter-btn" data-filter="web">
+مواقع
+</button>
+
+<button class="filter-btn" data-filter="brand">
+هوية بصرية
+</button>
+
+<button class="filter-btn" data-filter="social">
+سوشيال ميديا
+</button>
+
+</div>
+
+<div class="projects-grid">
+
+<article
+class="card project-card"
+data-category="brand">
+
+<img
+class="project-img"
+src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=900&q=80"
+alt="هوية بصرية"
+loading="lazy">
+
+<div class="project-body">
+
+<h3>
+هوية بصرية
+</h3>
+
+<p>
+لوجو + ألوان + خطوط لبراند بشكل متناسق.
+</p>
+
+<div class="tags">
+
+<span class="tag">
+Branding
+</span>
+
+<span class="tag">
+Logo
+</span>
+
+</div>
+
+<button
+class="btn small"
+onclick="openProject(
+'هوية بصرية',
+'تصميم هوية متكاملة تشمل الشعار، الألوان، الخطوط وطريقة استخدامها.',
+'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1200&q=85'
+)">
+التفاصيل
+</button>
+
+</div>
+
+</article>
+
+<article
+class="card project-card"
+data-category="web">
+
+<img
+class="project-img"
+src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
+alt="متجر إلكتروني"
+loading="lazy">
+
+<div class="project-body">
+
+<h3>
+متجر إلكتروني
+</h3>
+
+<p>
+واجهة متجر عصرية مع ترتيب واضح للمنتجات.
+</p>
+
+<div class="tags">
+
+<span class="tag">
+UI/UX
+</span>
+
+<span class="tag">
+Web
+</span>
+
+</div>
+
+<button
+class="btn small"
+onclick="openProject(
+'متجر إلكتروني',
+'واجهة متجر إلكتروني قابلة للتطوير وربطها لاحقاً بقاعدة بيانات ونظام دفع.',
+'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=85'
+)">
+التفاصيل
+</button>
+
+</div>
+
+</article>
+
+<article
+class="card project-card"
+data-category="social">
+
+<img
+class="project-img"
+src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=900&q=80"
+alt="سوشيال ميديا"
+loading="lazy">
+
+<div class="project-body">
+
+<h3>
+سوشيال ميديا
+</h3>
+
+<p>
+تصميمات للمنشورات والكفرات بأسلوب موحد.
+</p>
+
+<div class="tags">
+
+<span class="tag">
+Social
+</span>
+
+<span class="tag">
+Graphic
+</span>
+
+</div>
+
+<button
+class="btn small"
+onclick="openProject(
+'سوشيال ميديا',
+'باقة تصميمات لمنصات التواصل مع الحفاظ على الهوية البصرية للعلامة.',
+'https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=1200&q=85'
+)">
+التفاصيل
+</button>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<section id="services" class="page">
+
+<div class="section-title">
+
+<h2>
+الخدمات والباقات 🚀
+</h2>
+
+<p>
+الأسعار كما هي، وقابلة للتعديل حسب تفاصيل المشروع.
+</p>
+
+</div>
+
+<div class="projects-grid">
+
+<article class="card">
+
+<div style="font-size:38px">
+🌐
+</div>
+
+<h3>
+موقع تعريفي
+</h3>
+
+<p style="color:var(--muted);line-height:1.8">
+موقع سريع ومتجاوب لعرض نشاطك، خدماتك، أعمالك وطرق التواصل.
+</p>
+
+<h2>
+ابدأ من 1,500 ج.م
+</h2>
+
+<div class="tags">
+
+<span class="tag">Responsive</span>
+<span class="tag">SEO Basics</span>
+<span class="tag">WhatsApp</span>
+
+</div>
+
+<button
+class="btn"
+onclick="startOrder('basic')">
+اطلب الخدمة
+</button>
+
+</article>
+
+<article
+class="card"
+style="border-color:rgba(0,200,255,.38);transform:translateY(-4px)">
+
+<div style="font-size:38px">
+🛍️
+</div>
+
+<h3>
+متجر إلكتروني
+</h3>
+
+<p style="color:var(--muted);line-height:1.8">
+واجهة متجر احترافية قابلة للتطوير وعرض المنتجات بشكل جذاب.
+</p>
+
+<h2>
+ابدأ من 3,500 ج.م
+</h2>
+
+<div class="tags">
+
+<span class="tag">E-commerce</span>
+<span class="tag">UI/UX</span>
+<span class="tag">Mobile</span>
+
+</div>
+
+<button
+class="btn"
+onclick="startOrder('pro')">
+اطلب الخدمة
+</button>
+
+</article>
+
+<article class="card">
+
+<div style="font-size:38px">
+🎨
+</div>
+
+<h3>
+هوية بصرية
+</h3>
+
+<p style="color:var(--muted);line-height:1.8">
+شعار وألوان وخطوط تساعد البراند على الظهور بشكل موحد واحترافي.
+</p>
+
+<h2>
+ابدأ من 1,000 ج.م
+</h2>
+
+<div class="tags">
+
+<span class="tag">Logo</span>
+<span class="tag">Branding</span>
+<span class="tag">Social Kit</span>
+
+</div>
+
+<button
+class="btn"
+onclick="startOrder('basic')">
+اطلب الخدمة
+</button>
+
+</article>
+
+</div>
+
+<div class="card" style="margin-top:18px">
+
+<h3>
+✨ ماذا ستحصل عليه؟
+</h3>
+
+<div class="cards-grid">
+
+<div>
+<b>📱 متجاوب</b>
+<br>
+<span style="color:var(--muted)">
+موبايل + كمبيوتر
+</span>
+</div>
+
+<div>
+<b>⚡ سريع</b>
+<br>
+<span style="color:var(--muted)">
+واجهة خفيفة ومنظمة
+</span>
+</div>
+
+<div>
+<b>🤝 دعم</b>
+<br>
+<span style="color:var(--muted)">
+تعديلات حسب الاتفاق
+</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="order" class="page">
+
+<div class="section-title">
+
+<h2>
+اطلب مشروعك الآن 🛒
+</h2>
+
+<p>
+اختار الباقة والإضافات، وشوف السعر التقديري قبل إرسال الطلب.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="card">
+
+<h3>
+1) اختار الباقة
+</h3>
+
+<div class="package-grid">
+
+<label class="package active">
+
+<input
+type="radio"
+name="package"
+value="basic"
+checked>
+
+<span class="package-name">
+Basic
+</span>
+
+<strong>
+1,500 ج.م
+</strong>
+
+<small>
+موقع تعريفي بسيط
+</small>
+
+</label>
+
+<label class="package">
+
+<span class="popular-badge">
+الأكثر طلبًا
+</span>
+
+<input
+type="radio"
+name="package"
+value="pro">
+
+<span class="package-name">
+Pro
+</span>
+
+<strong>
+3,000 ج.م
+</strong>
+
+<small>
+موقع احترافي متكامل
+</small>
+
+</label>
+
+<label class="package">
+
+<input
+type="radio"
+name="package"
+value="premium">
+
+<span class="package-name">
+Premium
+</span>
+
+<strong>
+5,000 ج.م
+</strong>
+
+<small>
+تجربة تجارية متقدمة
+</small>
+
+</label>
+
+</div>
+
+<h3 style="margin-top:25px">
+2) إضافات اختيارية
+</h3>
+
+<div class="addons">
+
+<label>
+<input
+type="checkbox"
+class="addon"
+data-price="500"
+data-name="صفحة إضافية">
+
+صفحة إضافية
+
+<b>
++500 ج.م
+</b>
+</label>
+
+<label>
+<input
+type="checkbox"
+class="addon"
+data-price="750"
+data-name="متجر إلكتروني">
+
+متجر إلكتروني
+
+<b>
++750 ج.م
+</b>
+</label>
+
+<label>
+<input
+type="checkbox"
+class="addon"
+data-price="400"
+data-name="هوية بصرية">
+
+هوية بصرية
+
+<b>
++400 ج.م
+</b>
+</label>
+
+<label>
+<input
+type="checkbox"
+class="addon"
+data-price="300"
+data-name="تصميم سوشيال ميديا">
+
+باقة سوشيال ميديا
+
+<b>
++300 ج.م
+</b>
+</label>
+
+<label>
+<input
+type="checkbox"
+class="addon"
+data-price="350"
+data-name="تحسين SEO أساسي">
+
+SEO أساسي
+
+<b>
++350 ج.م
+</b>
+</label>
+
+</div>
+
+<h3 style="margin-top:25px">
+3) تفاصيل المشروع
+</h3>
+
+<input
+class="input"
+id="orderName"
+placeholder="اسمك"
+autocomplete="name">
+
+<input
+class="input"
+id="orderEmail"
+type="email"
+placeholder="إيميلك (اختياري)"
+autocomplete="email">
+
+<input
+class="input"
+id="orderBusiness"
+placeholder="اسم المشروع / البراند">
+
+<textarea
+class="input"
+id="orderDetails"
+placeholder="اكتب تفاصيل الموقع، عدد الصفحات، نوع النشاط، وأي طلبات خاصة...">
+</textarea>
+
+</div>
+
+<div class="card order-summary">
+
+<div class="summary-top">
+
+<span>
+التقدير المبدئي
+</span>
+
+<span>
+💎
+</span>
+
+</div>
+
+<div
+class="price"
+id="orderPrice">
+1,500 <small>ج.م</small>
+</div>
+
+<div class="summary-line">
+
+<span>
+الباقة
+</span>
+
+<b id="selectedPackage">
+Basic
+</b>
+
+</div>
+
+<div class="summary-line">
+
+<span>
+الإضافات
+</span>
+
+<b id="addonCount">
+0
+</b>
+
+</div>
+
+<div class="progress-wrap">
+
+<div class="skill-head">
+
+<span>
+اختياراتك
+</span>
+
+<b id="orderPercent">
+25%
+</b>
+
+</div>
+
+<div class="progress-track">
+
+<div
+class="progress-fill"
+id="orderProgress">
+</div>
+
+</div>
+
+</div>
+
+<div class="summary-note">
+
+ℹ️ السعر الظاهر
+<b>تقديري</b>
+وقد يتغير بعد مراجعة تفاصيل المشروع والاتفاق على المطلوب.
+
+</div>
+
+<button
+class="btn whatsapp"
+style="width:100%;margin-top:15px"
+onclick="sendWhatsApp()">
+
+💬 إرسال الطلب على واتساب
+
+</button>
+
+<button
+class="btn email"
+style="width:100%;margin-top:10px"
+onclick="sendEmail()">
+
+📧 إرسال الطلب بالإيميل
+
+</button>
+
+<a
+class="btn secondary"
+style="width:100%;margin-top:10px"
+href="https://wa.me/201018496877"
+target="_blank"
+rel="noopener">
+
+💬 فتح واتساب مباشرة
+
+</a>
+
+<p style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:0">
+
+واتساب مناسب للموبايل، والإيميل هو نفس طريقة الإرسال القديمة.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+  <section id="faq" class="page">
+
+<div class="section-title">
+<h2>الأسئلة الشائعة ❓</h2>
+<p>أهم الأسئلة قبل بدء المشروع.</p>
+</div>
+
+<div class="faq-list">
+
+<details class="card">
+<summary>هل الموقع متجاوب مع الموبايل؟</summary>
+<p style="color:var(--muted);line-height:1.9">
+نعم، التصميم متجاوب مع الموبايل والتابلت والكمبيوتر.
+</p>
+</details>
+
+<details class="card">
+<summary>هل أقدر أطلب تعديلات؟</summary>
+<p style="color:var(--muted);line-height:1.9">
+نعم، التعديلات يتم الاتفاق عليها حسب تفاصيل المشروع والباقة.
+</p>
+</details>
+
+<details class="card">
+<summary>هل الأسعار نهائية؟</summary>
+<p style="color:var(--muted);line-height:1.9">
+الأسعار المعروضة تقديرية، والسعر النهائي يتم تحديده بعد مراجعة تفاصيل المشروع.
+</p>
+</details>
+
+<details class="card">
+<summary>كيف أرسل تفاصيل مشروعي؟</summary>
+<p style="color:var(--muted);line-height:1.9">
+استخدم نموذج الطلب، وبعدها يمكنك إرسال التفاصيل مباشرة عبر واتساب أو البريد الإلكتروني.
+</p>
+</details>
+
+</div>
+
+</section>
+
+
+<section id="reviews" class="page">
+
+<div class="section-title">
+<h2>آراء وتجارب ⭐</h2>
+  <p>اراء عملائنا الحقيقين</p>
+</div>
+
+<div class="cards-grid">
+
+<div class="card review">
+<div style="font-size:25px">⭐⭐⭐⭐⭐</div>
+
+<h3>تجربة ممتازة</h3>
+
+<p>
+التصميم كان مرتب وواضح وسهل الاستخدام.
+</p>
+
+<strong> احمد خالد (عميل مميز لدينا)</strong>
+</div>
+
+<div class="card review">
+<div style="font-size:25px">⭐⭐⭐⭐⭐</div>
+
+<h3>تصميم احترافي</h3>
+
+<p>
+واجهة عصرية ومتجاوبة مع الموبايل.
+</p>
+
+<strong>محمود كمال</strong>
+</div>
+
+<div class="card review">
+<div style="font-size:25px">⭐⭐⭐⭐⭐</div>
+
+<h3>اهتمام بالتفاصيل</h3>
+
+<p>
+الألوان والتنظيم خلو الموقع شكله احترافي.
+</p>
+
+<strong> محمد مسعد</strong>
+</div>
+
+<div class="card review">
+<div style="font-size:25px">⭐⭐⭐⭐⭐</div>
+
+<h3>تواصل سهل</h3>
+
+<p>
+إرسال الطلب والتواصل عبر واتساب كان بسيط.
+</p>
+
+<strong>هشام احمد</strong>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="skills" class="page">
+
+<div class="section-title">
+
+<h2>المهارات ⚡</h2>
+
+<p>
+مجموعة من المهارات المستخدمة في تصميم المواقع والجرافيك.
+</p>
+
+</div>
+
+<div class="skills-grid">
+
+<div class="card skill-card">
+
+<div class="skill-icon">🌐</div>
+
+<h3>HTML & CSS</h3>
+
+<p>
+بناء واجهات ويب منظمة ومتجاوبة.
+</p>
+
+<div class="skills">
+
+<div class="skill-head">
+<span>المستوى</span>
+<b>95%</b>
+</div>
+
+<div class="bar">
+<i style="--w:95%"></i>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card skill-card">
+
+<div class="skill-icon">⚙️</div>
+
+<h3>JavaScript</h3>
+
+<p>
+إضافة التفاعل والحركة والوظائف داخل الموقع.
+</p>
+
+<div class="skills">
+
+<div class="skill-head">
+<span>المستوى</span>
+<b>85%</b>
+</div>
+
+<div class="bar">
+<i style="--w:85%"></i>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card skill-card">
+
+<div class="skill-icon">🎨</div>
+
+<h3>Graphic Design</h3>
+
+<p>
+تصميمات سوشيال ميديا وهويات بصرية.
+</p>
+
+<div class="skills">
+
+<div class="skill-head">
+<span>المستوى</span>
+<b>90%</b>
+</div>
+
+<div class="bar">
+<i style="--w:90%"></i>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card skill-card">
+
+<div class="skill-icon">📱</div>
+
+<h3>Responsive Design</h3>
+
+<p>
+تصميم يناسب أحجام الشاشات المختلفة.
+</p>
+
+<div class="skills">
+
+<div class="skill-head">
+<span>المستوى</span>
+<b>95%</b>
+</div>
+
+<div class="bar">
+<i style="--w:95%"></i>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="process" class="page">
+
+<div class="section-title">
+
+<h2>طريقة العمل 🚀</h2>
+
+<p>
+خطوات بسيطة من الفكرة حتى التسليم.
+</p>
+
+</div>
+
+<div class="cards-grid">
+
+<div class="card">
+
+<div class="step">
+01 — البداية
+</div>
+
+<h3>
+تحديد المطلوب
+</h3>
+
+<p>
+نتعرف على فكرة المشروع، النشاط، الصفحات المطلوبة والهدف من الموقع.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="step">
+02 — التخطيط
+</div>
+
+<h3>
+ترتيب المحتوى
+</h3>
+
+<p>
+يتم تحديد شكل الواجهة والأقسام وطريقة عرض المعلومات.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="step">
+03 — التصميم
+</div>
+
+<h3>
+بناء الواجهة
+</h3>
+
+<p>
+يتم تنفيذ التصميم وتجهيزه للموبايل والكمبيوتر.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="step">
+04 — المراجعة
+</div>
+
+<h3>
+التعديلات
+</h3>
+
+<p>
+مراجعة المشروع وإجراء التعديلات المتفق عليها.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="step">
+05 — التسليم
+</div>
+
+<h3>
+تسليم المشروع
+</h3>
+
+<p>
+بعد الانتهاء والمراجعة يتم تجهيز الملفات وتسليم المشروع.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="step">
+06 — التواصل
+</div>
+
+<h3>
+الدعم والتحديث
+</h3>
+
+<p>
+يمكن التواصل بخصوص التحديثات أو التطويرات المستقبلية.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about" class="page">
+
+<div class="section-title">
+
+<h2>عن Omar Designs 👤</h2>
+
+<p>
+نبذة بسيطة عن صاحب الموقع.
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div class="card center">
+
+<img
+class="profile"
+src="https://images.unsplash.com/photo-1557683316-973673baf926?w=500&q=80"
+alt="Omar Designs">
+
+<h2>
+Omar Designs
+</h2>
+
+<p style="color:var(--muted);line-height:1.9">
+
+أنا عمر، مهتم بتصميم المواقع والجرافيك.
+هدفي تقديم تصميمات عصرية وواضحة تساعد المشاريع والبراندات على الظهور بشكل احترافي.
+
+</p>
+
+<div class="actions" style="justify-content:center">
+
+<a
+class="btn whatsapp"
+href="https://wa.me/201018496877"
+target="_blank"
+rel="noopener">
+
+💬 تواصل واتساب
+
+</a>
+
+<a
+class="btn email"
+href="mailto:programmer.omar.programmer@gmail.com">
+
+📧 البريد الإلكتروني
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🎯 ماذا أقدم؟
+</h3>
+
+<p style="color:var(--muted);line-height:1.9">
+
+أعمل على تصميم مواقع تعريفية، متاجر إلكترونية،
+هويات بصرية وتصميمات للسوشيال ميديا.
+
+</p>
+
+<div class="skills">
+
+<div>
+
+<div class="skill-head">
+
+<span>Web Design</span>
+<b>95%</b>
+
+</div>
+
+<div class="bar">
+<i style="--w:95%"></i>
+</div>
+
+</div>
+
+
+<div>
+
+<div class="skill-head">
+
+<span>Graphic Design</span>
+<b>90%</b>
+
+</div>
+
+<div class="bar">
+<i style="--w:90%"></i>
+</div>
+
+</div>
+
+
+<div>
+
+<div class="skill-head">
+
+<span>UI / UX</span>
+<b>88%</b>
+
+</div>
+
+<div class="bar">
+<i style="--w:88%"></i>
+</div>
+
+</div>
+
+
+<div>
+
+<div class="skill-head">
+
+<span>Responsive</span>
+<b>95%</b>
+
+</div>
+
+<div class="bar">
+<i style="--w:95%"></i>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card cta-card" style="margin-top:18px">
+
+<div style="font-size:35px">
+🚀
+</div>
+
+<h2>
+عندك فكرة؟
+</h2>
+
+<p>
+خلينا نحولها لتصميم احترافي.
+ابدأ باختيار الباقة المناسبة وشوف السعر التقديري.
+</p>
+
+<div class="cta-actions">
+
+<button
+class="btn"
+onclick="goTo('order')">
+
+🛒 اطلب مشروعك
+
+</button>
+
+<a
+class="btn whatsapp"
+href="https://wa.me/201018496877"
+target="_blank"
+rel="noopener">
+
+💬 تواصل معي
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<div>
+<strong>OMAR DESIGNS</strong>
+</div>
+
+<div style="margin-top:8px">
+Web & Graphic Design
+</div>
+
+<div style="margin-top:10px">
+© <span id="year"></span> Omar Designs — جميع الحقوق محفوظة
+</div>
+
+</footer>
+
+
+<!-- PROJECT MODAL -->
+
+<div
+class="modal"
+id="projectModal"
+role="dialog"
+aria-modal="true"
+aria-labelledby="modalTitle">
+
+<div class="modal-card">
+
+<div class="modal-head">
+
+<h2 id="modalTitle">
+تفاصيل المشروع
+</h2>
+
+<button
+class="close"
+onclick="closeProject()"
+aria-label="إغلاق">
+
+×
+</button>
+
+</div>
+
+<img
+id="modalImg"
+class="modal-img"
+src=""
+alt="">
+
+<p
+id="modalText"
+style="color:var(--muted);line-height:1.9">
+</p>
+
+<div class="modal-actions">
+
+<a
+class="btn whatsapp"
+href="https://wa.me/201018496877"
+target="_blank"
+rel="noopener">
+
+💬 اسأل عن المشروع
+
+</a>
+
+<button
+class="btn secondary"
+onclick="closeProject()">
+
+إغلاق
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<a
+id="whatsappFloat"
+href="https://wa.me/201018496877"
+target="_blank"
+rel="noopener"
+aria-label="واتساب">
+
+💬
+
+</a>
+
+
+<button
+id="scrollTop"
+aria-label="العودة للأعلى">
+
+↑
+
+</button>
+
+
+<div
+class="toast"
+id="toast">
+</div>
+
+
+<script>
+
+/* =========================
+   BASIC FUNCTIONS
+========================= */
+
+const $ = id => document.getElementById(id);
+
+const WA = "201018496877";
+
+const EMAIL =
+"programmer.omar.programmer@gmail.com";
+
+
+/* =========================
+   PAGE NAVIGATION
+========================= */
+
+function goTo(page){
+
+document
+.querySelectorAll(".page")
+.forEach(p => {
+
+p.classList.remove("active");
+
+});
+
+const target = $(page);
+
+if(target){
+
+target.classList.add("active");
+
+}
+
+document
+.querySelectorAll(".nav-btn")
+.forEach(btn => {
+
+btn.classList.toggle(
+"active",
+btn.dataset.page === page
+);
+
+});
+
+const navLinks = $("navLinks");
+
+if(navLinks){
+
+navLinks.classList.remove("open");
+
+}
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================
+   NAV BUTTONS
+========================= */
+
+document
+.querySelectorAll(".nav-btn")
+.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+goTo(btn.dataset.page);
+
+});
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+$("menuBtn").addEventListener(
+"click",
+() => {
+
+const nav = $("navLinks");
+
+const open =
+nav.classList.toggle("open");
+
+$("menuBtn").setAttribute(
+"aria-expanded",
+open ? "true" : "false"
+);
+
+}
+);
+
+
+/* =========================
+   THEME
+========================= */
+
+const savedTheme =
+localStorage.getItem("omar-theme");
+
+if(savedTheme === "light"){
+
+document.body.classList.add("light");
+
+$("themeBtn").textContent = "☀️";
+
+}
+
+$("themeBtn").addEventListener(
+"click",
+() => {
+
+document.body.classList.toggle("light");
+
+const light =
+document.body.classList.contains("light");
+
+localStorage.setItem(
+"omar-theme",
+light ? "light" : "dark"
+);
+
+$("themeBtn").textContent =
+light ? "☀️" : "🌙";
+
+}
+);
+
+
+/* =========================
+   PROJECT MODAL
+========================= */
+
+function openProject(title,text,img){
+
+$("modalTitle").textContent =
+title;
+
+$("modalText").textContent =
+text;
+
+$("modalImg").src =
+img;
+
+$("modalImg").alt =
+title;
+
+$("projectModal")
+.classList.add("show");
+
+document.body.style.overflow =
+"hidden";
+
+}
+
+
+function closeProject(){
+
+$("projectModal")
+.classList.remove("show");
+
+document.body.style.overflow =
+"";
+
+}
+
+
+$("projectModal").addEventListener(
+"click",
+e => {
+
+if(e.target.id === "projectModal"){
+
+closeProject();
+
+}
+
+}
+);
+
+
+/* =========================
+   ORDER DATA
+========================= */
+
+const packages = {
+
+basic:{
+name:"Basic",
+price:1500
+},
+
+pro:{
+name:"Pro",
+price:3000
+},
+
+premium:{
+name:"Premium",
+price:5000
+}
+
+};
+
+
+function getOrderData(){
+
+const selected =
+document.querySelector(
+'input[name="package"]:checked'
+);
+
+const pkg =
+packages[selected.value];
+
+const addons =
+[
+...document.querySelectorAll(
+".addon:checked"
+)
+];
+
+const addonTotal =
+addons.reduce(
+(sum,item) =>
+sum + Number(item.dataset.price),
+0
+);
+
+return {
+
+pkg,
+
+addons,
+
+addonTotal,
+
+total:
+pkg.price + addonTotal,
+
+selected
+
+};
+
+}
+
+
+/* =========================
+   UPDATE PRICE
+========================= */
+
+function updateOrder(){
+
+const d =
+getOrderData();
+
+$("orderPrice").innerHTML =
+d.total.toLocaleString("en-US")
++
+' <small>ج.م</small>';
+
+$("selectedPackage").textContent =
+d.pkg.name;
+
+$("addonCount").textContent =
+d.addons.length;
+
+const percent =
+Math.min(
+100,
+25 + d.addons.length * 15
+);
+
+$("orderProgress").style.width =
+percent + "%";
+
+$("orderPercent").textContent =
+percent + "%";
+
+
+document
+.querySelectorAll(".package")
+.forEach(p =>
+p.classList.remove("active")
+);
+
+d.selected
+.closest(".package")
+.classList.add("active");
+
+}
+
+
+document
+.querySelectorAll(
+'input[name="package"], .addon'
+)
+.forEach(el => {
+
+el.addEventListener(
+"change",
+updateOrder
+);
+
+});
+
+
+/* =========================
+   START ORDER
+========================= */
+
+function startOrder(type){
+
+const radio =
+document.querySelector(
+`input[name="package"][value="${type}"]`
+);
+
+if(radio){
+
+radio.checked = true;
+
+updateOrder();
+
+}
+
+goTo("order");
+
+}
+
+
+/* =========================
+   VALIDATE ORDER
+========================= */
+
+function validateOrder(){
+
+const name =
+$("orderName").value.trim();
+
+const details =
+$("orderDetails").value.trim();
+
+if(!name || !details){
+
+showToast(
+"اكتب اسمك وتفاصيل المشروع أولاً."
+);
+
+return null;
+
+}
+
+return {
+
+name,
+
+email:
+$("orderEmail").value.trim(),
+
+business:
+$("orderBusiness").value.trim(),
+
+details,
+
+...getOrderData()
+
+};
+
+}
+
+
+/* =========================
+   CREATE ORDER MESSAGE
+========================= */
+
+function orderMessage(){
+
+const d =
+validateOrder();
+
+if(!d){
+
+return null;
+
+}
+
+const addonText =
+d.addons.length
+
+?
+
+d.addons
+.map(
+a =>
+`${a.dataset.name} (+${Number(a.dataset.price).toLocaleString("en-US")} ج.م)`
+)
+.join("، ")
+
+:
+
+"لا توجد إضافات";
+
+
+return `مرحباً Omar Designs 👋
+
+الاسم: ${d.name}
+الإيميل: ${d.email || "غير مذكور"}
+اسم المشروع: ${d.business || "غير مذكور"}
+
+الباقة: ${d.pkg.name}
+سعر الباقة: ${d.pkg.price.toLocaleString("en-US")} ج.م
+الإضافات: ${addonText}
+السعر التقديري: ${d.total.toLocaleString("en-US")} ج.م
+
+تفاصيل المشروع:
+${d.details}
+
+أرسل لي العرض النهائي بعد مراجعة التفاصيل.`;
+
+}
+
+
+/* =========================
+   SEND WHATSAPP
+========================= */
+
+function sendWhatsApp(){
+
+const message =
+orderMessage();
+
+if(!message){
+
+return;
+
+}
+
+window.open(
+`https://wa.me/${WA}?text=${encodeURIComponent(message)}`,
+"_blank"
+);
+
+showToast(
+"تم تجهيز رسالة الطلب على واتساب."
+);
+
+}
+
+
+/* =========================
+   SEND EMAIL
+========================= */
+
+function sendEmail(){
+
+const message =
+orderMessage();
+
+if(!message){
+
+return;
+
+}
+
+const business =
+$("orderBusiness")
+.value
+.trim();
+
+const subject =
+encodeURIComponent(
+`طلب عرض سعر - ${business || "مشروع جديد"}`
+);
+
+window.location.href =
+`mailto:${EMAIL}?subject=${subject}&body=${encodeURIComponent(message)}`;
+
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+function showToast(text){
+
+const toast =
+$("toast");
+
+toast.textContent =
+text;
+
+toast.classList.add("show");
+
+clearTimeout(
+window.toastTimer
+);
+
+window.toastTimer =
+setTimeout(
+() => {
+
+toast.classList.remove("show");
+
+},
+2800
+);
+
+}
+
+
+/* =========================
+   YEAR
+========================= */
+
+$("year").textContent =
+new Date().getFullYear();
+
+
+/* =========================
+   SCROLL TOP
+========================= */
+
+$("scrollTop").addEventListener(
+"click",
+() => {
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+);
+
+
+window.addEventListener(
+"scroll",
+() => {
+
+$("scrollTop").style.display =
+window.scrollY > 350
+? "block"
+: "none";
+
+}
+);
+
+
+/* =========================
+   PROJECT FILTERS
+========================= */
+
+document
+.querySelectorAll(".filter-btn")
+.forEach(button => {
+
+button.addEventListener(
+"click",
+() => {
+
+document
+.querySelectorAll(".filter-btn")
+.forEach(b =>
+b.classList.remove("active")
+);
+
+button.classList.add("active");
+
+const filter =
+button.dataset.filter;
+
+document
+.querySelectorAll(".project-card")
+.forEach(card => {
+
+card.classList.toggle(
+"is-hidden",
+filter !== "all" &&
+card.dataset.category !== filter
+);
+
+});
+
+}
+);
+
+});
+
+
+/* =========================
+   INITIALIZE
+========================= */
+
+updateOrder();
+
+</script>
+
+</body>
+</html>
